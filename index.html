@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Drought Relief Bores 23-6-21</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <meta charset="utf-8">
+  <title>Drought Relief Bores</title>
+  
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,maximum-scale=1">
+  
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+  
+
+
+</head>
+
+<body>
+  <style>
+    .mapboxgl-popup {
+      max-width: 200px;
+    }
+  </style>
+
+<!--   <div id="map"> -->
+<div id="map"></div>
+<div class="map-overlay top">
+<div class="map-overlay-inner">
+<fieldset>
+<label>Colour by...</label>
+<select id="display" name="display">
+<option value="Data">Data volume</option>
+<option value="Flow">Flow m³/day</option>
+<option value="TDS">TDS mg/L</option>
+  <option value="Depth">Depth MBGL</option>
+</select>
+</fieldset>
+<table id="data_table">
+  <tr>
+    <th>Colour</th>
+    <th>Data count</th>
+  </tr>
+  <tr>
+    <td bgcolor="#5242ff">Blue</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td bgcolor="#1fff0a">Green</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td bgcolor="#fffb05">Yellow</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td bgcolor="#ff1f1f">Red</td>
+    <td>5</td>
+  </tr>
+</table>
+  
+  <table style="display:none"  id="flow_table">
+    
+  <tr>
+    <th>Colour</th>
+    <th>Flow m³/day</th>
+  </tr>
+  <tr>
+    <td bgcolor="#5242ff">Blue</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td bgcolor="#1fff0a">Green</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td bgcolor="#fffb05">Yellow</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td bgcolor="#ff1f1f">Red</td>
+    <td>0</td>
+  </tr>
+    <tr>
+    <td bgcolor="#000000"><font color="white">Black</font></td>
+    <td>No data</td>
+  </tr>
+</table>
+  
+  
+    <table style="display:none"  id="tds_table">
+  <tr>
+    <th>Colour</th>
+    <th>TDS mg/L</th>
+  </tr>
+  <tr>
+    <td bgcolor="#5242ff">Blue</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td bgcolor="#1fff0a">Green</td>
+    <td>1,000</td>
+  </tr>
+  <tr>
+    <td bgcolor="#fffb05">Yellow</td>
+    <td>5,000</td>
+  </tr>
+  <tr>
+    <td bgcolor="#ff1f1f">Red</td>
+    <td>16,000</td>
+  </tr>
+       <tr>
+    <td bgcolor="#FFFFFF">White</td>
+    <td>>16,000</td>
+  </tr>
+    <tr>
+    <td bgcolor="#000000"><font color="white">Black</font></td>
+    <td>No data</td>
+  </tr>
+</table>
+  
+      <table style="display:none"  id="depth_table">
+  <tr>
+    <th>Colour</th>
+    <th>Depth MBGL</th>
+  </tr>
+  <tr>
+    <td bgcolor="#5242ff">Blue</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td bgcolor="#1fff0a">Green</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td bgcolor="#fffb05">Yellow</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td bgcolor="#ff1f1f">Red</td>
+    <td>50</td>
+  </tr>
+    <tr>
+    <td bgcolor="#000000"><font color="white">Black</font></td>
+    <td>No data</td>
+  </tr>
+</table>
+  
+</div>
+</div>  
+  
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
